@@ -1,6 +1,7 @@
 import { Clock, Lock } from "lucide-react"
 
 import { ComingSoonButton } from "@/components/coming-soon-button"
+import { Reveal } from "@/components/reveal"
 
 const MOCK_ROWS = [
   { time: "6:00 AM", class: "Reformer Flow", instructor: "Maria" },
@@ -14,7 +15,7 @@ export function ScheduleSection() {
   return (
     <section className="border-y border-border/60 bg-muted/40">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
-        <div className="mb-10 flex flex-col gap-3">
+        <Reveal className="mb-10 flex flex-col gap-3">
           <span className="text-xs font-semibold tracking-[0.2em] text-primary uppercase">
             This week at the studio
           </span>
@@ -25,9 +26,9 @@ export function ScheduleSection() {
             Real-time class booking is launching soon. Here&apos;s a preview
             of a typical Tuesday.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="relative overflow-hidden rounded-2xl ring-1 ring-border/60">
+        <Reveal delay={150} className="relative overflow-hidden rounded-2xl ring-1 ring-border/60">
           <div className="divide-y divide-border/60 bg-card">
             {MOCK_ROWS.map((row) => (
               <div
@@ -68,7 +69,7 @@ export function ScheduleSection() {
               className="rounded-full border-border bg-background"
             />
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

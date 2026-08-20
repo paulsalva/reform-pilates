@@ -3,16 +3,13 @@ import { Star } from "lucide-react"
 
 import { ComingSoonButton } from "@/components/coming-soon-button"
 import { Button } from "@/components/ui/button"
+import { Reveal } from "@/components/reveal"
 
 export function HeroSection() {
   return (
     <section id="top" className="bg-hero-gradient text-primary-foreground">
       <div className="mx-auto max-w-6xl px-4 pt-10 pb-12 sm:px-6 sm:pt-14 sm:pb-16 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12 lg:pt-20 lg:pb-24">
-        <div className="flex flex-col gap-6">
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[0.7rem] font-medium tracking-[0.14em] text-mauve uppercase">
-            Kenosha&apos;s Boutique Reformer Studio
-          </span>
-
+        <Reveal className="flex flex-col gap-6">
           <h1 className="font-serif text-4xl leading-[1.08] text-balance text-white sm:text-5xl">
             Pilates is the foundation.{" "}
             <span className="italic text-gradient-gold">Movement</span> is the
@@ -21,8 +18,8 @@ export function HeroSection() {
 
           <p className="max-w-md text-base leading-relaxed text-pretty text-white/70">
             Reformer Pilates, mat flow, TRX, and strength-based movement in an
-            elevated studio built for every body — especially yours, on day
-            one.
+            elevated studio in Kenosha, WI — built for every body, especially
+            yours, on day one.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">
@@ -52,9 +49,9 @@ export function HeroSection() {
               4.9 rating · 180+ Kenosha clients
             </p>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="relative mt-10 lg:mt-0">
+        <Reveal delay={150} className="relative mt-10 lg:mt-0">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl ring-1 ring-white/10">
             <Image
               src="/images/hero-reformer.png"
@@ -72,7 +69,7 @@ export function HeroSection() {
               <span className="italic">Now I can&apos;t miss a week.</span>&rdquo;
             </p>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

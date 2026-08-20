@@ -1,13 +1,14 @@
 import { AtSign, Clock, MapPin, Phone } from "lucide-react"
 
 import { ComingSoonButton } from "@/components/coming-soon-button"
+import { Reveal } from "@/components/reveal"
 
 export function LocationSection() {
   return (
     <section id="visit" className="bg-background">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-          <div className="relative flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 overflow-hidden rounded-3xl bg-plum-gradient text-primary-foreground sm:aspect-[16/9] lg:aspect-auto">
+          <Reveal className="relative flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 overflow-hidden rounded-3xl bg-plum-gradient text-primary-foreground sm:aspect-[16/9] lg:aspect-auto">
             <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:22px_22px]" />
             <MapPin className="relative size-8 text-gold" />
             <p className="relative font-serif text-lg text-white">
@@ -16,9 +17,9 @@ export function LocationSection() {
             <p className="relative text-sm text-white/70">
               Map &amp; directions available at launch
             </p>
-          </div>
+          </Reveal>
 
-          <div className="flex flex-col gap-8">
+          <Reveal delay={150} className="flex flex-col gap-8">
             <div className="flex flex-col gap-3">
               <span className="text-xs font-semibold tracking-[0.2em] text-primary uppercase">
                 Visit the studio
@@ -83,7 +84,7 @@ export function LocationSection() {
               size="lg"
               className="h-12 w-fit rounded-full bg-plum-gradient px-6 text-base text-primary-foreground shadow-sm hover:opacity-90 dark:bg-none dark:bg-primary"
             />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

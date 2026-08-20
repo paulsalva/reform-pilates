@@ -1,6 +1,7 @@
 import { Check } from "lucide-react"
 
 import { ComingSoonButton } from "@/components/coming-soon-button"
+import { Reveal } from "@/components/reveal"
 
 const INCLUDED = [
   "3 reformer classes, any level",
@@ -13,9 +14,9 @@ export function IntroOfferSection() {
   return (
     <section id="offer" className="bg-background">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
-        <div className="overflow-hidden rounded-3xl bg-hero-gradient px-6 py-12 text-primary-foreground sm:px-12 sm:py-16">
+        <Reveal className="overflow-hidden rounded-3xl bg-hero-gradient px-6 py-12 text-primary-foreground sm:px-12 sm:py-16">
           <div className="mx-auto flex max-w-2xl flex-col items-center gap-6 text-center">
-            <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[0.7rem] font-medium tracking-[0.14em] text-mauve uppercase">
+            <span className="text-xs font-semibold tracking-[0.2em] text-mauve uppercase">
               New client offer
             </span>
             <h2 className="font-serif text-3xl text-balance text-white sm:text-4xl">
@@ -46,7 +47,7 @@ export function IntroOfferSection() {
               className="mt-2 h-12 rounded-full bg-gold px-7 text-base text-gold-foreground shadow-lg shadow-black/20 hover:bg-gold/90"
             />
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { CalendarCheck, HeartHandshake, PersonStanding } from "lucide-react"
 
+import { Reveal } from "@/components/reveal"
+
 const STEPS = [
   {
     icon: CalendarCheck,
@@ -23,7 +25,7 @@ export function StartHereSection() {
   return (
     <section className="bg-background">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-24">
-        <div className="order-2 flex flex-col gap-8 lg:order-1">
+        <Reveal className="flex flex-col gap-8">
           <div className="flex flex-col gap-3">
             <span className="text-xs font-semibold tracking-[0.2em] text-primary uppercase">
               New here?
@@ -55,9 +57,9 @@ export function StartHereSection() {
               </li>
             ))}
           </ol>
-        </div>
+        </Reveal>
 
-        <div className="order-1 lg:order-2">
+        <Reveal delay={150}>
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl ring-1 ring-border/60">
             <Image
               src="/images/intro-session.png"
@@ -67,7 +69,7 @@ export function StartHereSection() {
               sizes="(min-width: 1024px) 480px, 100vw"
             />
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )
