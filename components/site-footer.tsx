@@ -1,3 +1,5 @@
+import { Logo } from "@/components/logo"
+
 const NAV_LINKS = [
   { href: "#classes", label: "Classes" },
   { href: "#offer", label: "Intro Offer" },
@@ -11,14 +13,9 @@ export function SiteFooter() {
     <footer className="bg-background">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="flex flex-col gap-6 border-t border-border/60 pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-col gap-1">
-            <a href="#top" className="flex items-baseline gap-1.5">
-              <span className="font-serif text-base font-medium text-foreground">
-                Reform
-              </span>
-              <span className="text-[0.62rem] font-medium tracking-[0.28em] text-primary uppercase">
-                Pilates
-              </span>
+          <div className="flex flex-col gap-2">
+            <a href="#top" className="flex items-center">
+              <Logo height={26} />
             </a>
             <p className="text-xs text-muted-foreground">
               Kenosha, WI · Reformer Pilates, Mat, TRX &amp; Strength

@@ -4,6 +4,7 @@ import {
   Card,
   CardContent,
 } from "@/components/ui/card"
+import { Reveal } from "@/components/reveal"
 
 const REVIEWS = [
   {
@@ -30,7 +31,7 @@ export function TrustSection() {
   return (
     <section className="border-y border-border/60 bg-muted/40">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-        <div className="mb-10 flex flex-col items-center gap-3 text-center">
+        <Reveal className="mb-10 flex flex-col items-center gap-3 text-center">
           <div className="flex text-gold">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star key={i} className="size-5 fill-current" />
@@ -42,31 +43,30 @@ export function TrustSection() {
           <p className="text-sm text-muted-foreground">
             Kenosha&apos;s most-loved reformer studio
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid gap-5 sm:grid-cols-3">
-          {REVIEWS.map((review) => (
-            <Card
-              key={review.name}
-              className="border-border/60 bg-card shadow-none"
-            >
-              <CardContent className="flex flex-col gap-4">
-                <div className="flex text-gold">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="size-3.5 fill-current" />
-                  ))}
-                </div>
-                <p className="text-sm leading-relaxed text-pretty text-card-foreground">
-                  &ldquo;{review.quote}&rdquo;
-                </p>
-                <div className="mt-auto pt-2">
-                  <p className="text-sm font-medium text-card-foreground">
-                    {review.name}
+          {REVIEWS.map((review, index) => (
+            <Reveal key={review.name} delay={index * 100}>
+              <Card className="h-full border-border/60 bg-card shadow-none">
+                <CardContent className="flex flex-col gap-4">
+                  <div className="flex text-gold">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className="size-3.5 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-sm leading-relaxed text-pretty text-card-foreground">
+                    &ldquo;{review.quote}&rdquo;
                   </p>
-                  <p className="text-xs text-muted-foreground">{review.tag}</p>
-                </div>
-              </CardContent>
-            </Card>
+                  <div className="mt-auto pt-2">
+                    <p className="text-sm font-medium text-card-foreground">
+                      {review.name}
+                    </p>
+                    <p className="text-xs text-muted-foreground">{review.tag}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Reveal>
           ))}
         </div>
       </div>

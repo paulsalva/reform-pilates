@@ -12,6 +12,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet"
 import { ComingSoonButton } from "@/components/coming-soon-button"
+import { Logo } from "@/components/logo"
 
 const NAV_LINKS = [
   { href: "#classes", label: "Classes" },
@@ -27,13 +28,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="#top" className="flex items-baseline gap-1.5">
-          <span className="font-serif text-lg font-medium tracking-tight text-foreground">
-            Reform
-          </span>
-          <span className="text-[0.65rem] font-medium tracking-[0.28em] text-primary uppercase">
-            Pilates
-          </span>
+        <a href="#top" className="flex items-center">
+          <Logo height={30} />
         </a>
 
         <nav className="hidden items-center gap-7 md:flex">

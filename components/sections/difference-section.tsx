@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { Award, Gauge, Sparkle, Users } from "lucide-react"
 
+import { Reveal } from "@/components/reveal"
+
 const PILLARS = [
   {
     icon: Users,
@@ -29,7 +31,7 @@ export function DifferenceSection() {
     <section className="bg-background">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl ring-1 ring-border/60">
+          <Reveal className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl ring-1 ring-border/60">
             <Image
               src="/images/studio-interior.png"
               alt="A row of reformer machines in a warm, sunlit boutique Pilates studio"
@@ -37,9 +39,9 @@ export function DifferenceSection() {
               className="object-cover"
               sizes="(min-width: 1024px) 560px, 100vw"
             />
-          </div>
+          </Reveal>
 
-          <div className="flex flex-col gap-8">
+          <Reveal delay={150} className="flex flex-col gap-8">
             <div className="flex flex-col gap-3">
               <span className="text-xs font-semibold tracking-[0.2em] text-primary uppercase">
                 The Reform difference
@@ -62,7 +64,7 @@ export function DifferenceSection() {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

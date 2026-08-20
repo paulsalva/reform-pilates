@@ -6,7 +6,7 @@ import {
 } from "lucide-react"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Reveal } from "@/components/reveal"
 
 const CLASSES = [
   {
@@ -39,7 +39,7 @@ export function ClassesSection() {
   return (
     <section id="classes" className="bg-background">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
-        <div className="mb-10 flex flex-col gap-3">
+        <Reveal className="mb-10 flex flex-col gap-3">
           <span className="text-xs font-semibold tracking-[0.2em] text-primary uppercase">
             Find your class
           </span>
@@ -50,31 +50,30 @@ export function ClassesSection() {
             From your very first reformer session to your hundredth, there is
             a class built for exactly where you are.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid gap-5 sm:grid-cols-2">
-          {CLASSES.map((item) => (
-            <Card
-              key={item.title}
-              className="border-border/60 bg-card shadow-none transition-shadow hover:shadow-md"
-            >
-              <CardContent className="flex flex-col gap-4">
-                <div className="flex items-start justify-between">
-                  <div className="flex size-11 items-center justify-center rounded-full bg-plum-gradient">
-                    <item.icon className="size-5 text-primary-foreground" />
+          {CLASSES.map((item, index) => (
+            <Reveal key={item.title} delay={index * 100}>
+              <Card className="h-full border-border/60 bg-card shadow-none transition-shadow hover:shadow-md">
+                <CardContent className="flex flex-col gap-4">
+                  <div className="flex items-start justify-between">
+                    <div className="flex size-11 items-center justify-center rounded-full bg-plum-gradient">
+                      <item.icon className="size-5 text-primary-foreground" />
+                    </div>
+                    <span className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
+                      {item.level}
+                    </span>
                   </div>
-                  <Badge variant="secondary" className="rounded-full">
-                    {item.level}
-                  </Badge>
-                </div>
-                <h3 className="font-serif text-xl text-card-foreground">
-                  {item.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-pretty text-muted-foreground">
-                  {item.body}
-                </p>
-              </CardContent>
-            </Card>
+                  <h3 className="font-serif text-xl text-card-foreground">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-pretty text-muted-foreground">
+                    {item.body}
+                  </p>
+                </CardContent>
+              </Card>
+            </Reveal>
           ))}
         </div>
       </div>

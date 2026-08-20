@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { Reveal } from "@/components/reveal"
 
 const FAQS = [
   {
@@ -37,29 +38,31 @@ export function FaqSection() {
   return (
     <section id="faq" className="bg-background">
       <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:py-24">
-        <div className="mb-8 flex flex-col gap-3 text-center">
+        <Reveal className="mb-8 flex flex-col gap-3 text-center">
           <span className="text-xs font-semibold tracking-[0.2em] text-primary uppercase">
             Good to know
           </span>
           <h2 className="font-serif text-3xl text-balance text-foreground sm:text-4xl">
             Frequently asked questions
           </h2>
-        </div>
+        </Reveal>
 
-        <Accordion multiple={false}>
-          {FAQS.map((faq) => (
-            <AccordionItem key={faq.question} value={faq.question}>
-              <AccordionTrigger className="font-serif text-base text-foreground">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent>
-                <p className="leading-relaxed text-pretty text-muted-foreground">
-                  {faq.answer}
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <Reveal delay={100}>
+          <Accordion multiple={false}>
+            {FAQS.map((faq) => (
+              <AccordionItem key={faq.question} value={faq.question}>
+                <AccordionTrigger className="font-serif text-base text-foreground">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="leading-relaxed text-pretty text-muted-foreground">
+                    {faq.answer}
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </Reveal>
       </div>
     </section>
   )
