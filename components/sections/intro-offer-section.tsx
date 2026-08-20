@@ -12,7 +12,7 @@ const INCLUDED = [
 
 export function IntroOfferSection() {
   return (
-    <section id="offer" className="bg-background">
+    <section id="offer" className="bg-accent/35">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
         <Reveal className="overflow-hidden rounded-3xl bg-hero-gradient px-6 py-12 text-primary-foreground sm:px-12 sm:py-16">
           <div className="mx-auto flex max-w-2xl flex-col items-center gap-6 text-center">
