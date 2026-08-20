@@ -11,10 +11,11 @@ export function HeroSection() {
       <div className="mx-auto max-w-6xl px-4 pt-10 pb-12 sm:px-6 sm:pt-14 sm:pb-16 lg:grid lg:grid-cols-2 lg:items-center lg:gap-12 lg:pt-20 lg:pb-24">
         <Reveal className="flex flex-col gap-6">
           <h1 className="font-serif text-4xl leading-[1.08] text-balance text-white sm:text-5xl">
-            Pilates is the foundation.{" "}
-            <span className="italic text-gradient-gold">Movement</span> is the
-            method.
+            Kenosha&apos;s Boutique Pilates Studio
           </h1>
+          <p className="font-serif text-2xl italic leading-tight text-gradient-gold sm:text-3xl">
+            Modern. Innovative. Personalized.
+          </p>
 
           <p className="max-w-md text-base leading-relaxed text-pretty text-white/70">
             Reformer Pilates, mat flow, TRX, and strength-based movement in an

@@ -53,28 +53,33 @@ export function ClassesSection() {
         </Reveal>
 
         <div className="grid gap-5 sm:grid-cols-2">
-          {CLASSES.map((item, index) => (
+          {CLASSES.map((item, index) => {
+            const treatments = ["bg-card card-lines", "bg-plum-gradient text-primary-foreground", "card-lilac card-diagonal", "bg-card card-lines"]
+            const treatment = treatments[index]
+
+            return (
             <Reveal key={item.title} delay={index * 100}>
-              <Card className="h-full border-border/60 bg-card shadow-none transition-shadow hover:shadow-md">
+              <Card className={`h-full border-border/60 ${treatment} shadow-none transition-shadow hover:shadow-md`}>
                 <CardContent className="flex flex-col gap-4">
                   <div className="flex items-start justify-between">
-                    <div className="flex size-11 items-center justify-center rounded-full bg-plum-gradient">
-                      <item.icon className="size-5 text-primary-foreground" />
+                    <div className="flex size-11 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                      <item.icon className="size-5" />
                     </div>
-                    <span className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
+                    <span className="text-xs font-medium tracking-wide text-current/65 uppercase">
                       {item.level}
                     </span>
                   </div>
-                  <h3 className="font-serif text-xl text-card-foreground">
+                  <h3 className="font-serif text-xl text-current">
                     {item.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-pretty text-muted-foreground">
+                  <p className="text-sm leading-relaxed text-pretty text-current/70">
                     {item.body}
                   </p>
                 </CardContent>
               </Card>
             </Reveal>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

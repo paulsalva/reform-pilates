@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { AtSign, Clock, MapPin, Phone } from "lucide-react"
 
 import { ComingSoonButton } from "@/components/coming-soon-button"
@@ -86,6 +87,48 @@ export function LocationSection() {
             />
           </Reveal>
         </div>
+
+        <Reveal delay={100} className="mt-12 flex flex-col gap-5 lg:mt-16">
+          <div className="flex flex-col gap-2">
+            <span className="text-xs font-semibold tracking-[0.2em] text-primary uppercase">
+              Inside Reform
+            </span>
+            <h2 className="font-serif text-3xl text-balance text-foreground sm:text-4xl">
+              A space designed for your practice.
+            </h2>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-[1.35fr_1fr]">
+            <div className="relative min-h-72 overflow-hidden rounded-3xl ring-1 ring-border/60 sm:min-h-96">
+              <Image
+                src="/images/standing.webp"
+                alt="Pilates equipment and movement space inside Reform Pilates"
+                fill
+                className="object-cover transition-transform duration-700 hover:scale-[1.02]"
+                sizes="(min-width: 640px) 56vw, 100vw"
+              />
+            </div>
+            <div className="grid min-h-72 gap-4 sm:min-h-96">
+              <div className="relative min-h-36 overflow-hidden rounded-3xl ring-1 ring-border/60">
+                <Image
+                  src="/images/bars.webp"
+                  alt="Pilates bar equipment inside the Reform studio"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-[1.02]"
+                  sizes="(min-width: 640px) 44vw, 100vw"
+                />
+              </div>
+              <div className="relative min-h-36 overflow-hidden rounded-3xl ring-1 ring-border/60">
+                <Image
+                  src="/images/Front-desk.webp"
+                  alt="Front desk and welcoming entry area at Reform Pilates"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-[1.02]"
+                  sizes="(min-width: 640px) 44vw, 100vw"
+                />
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

@@ -46,20 +46,23 @@ export function TrustSection() {
         </Reveal>
 
         <div className="grid gap-5 sm:grid-cols-3">
-          {REVIEWS.map((review, index) => (
+          {REVIEWS.map((review, index) => {
+            const treatments = ["bg-card card-lines", "card-lilac card-diagonal", "bg-plum-gradient text-primary-foreground"]
+
+            return (
             <Reveal key={review.name} delay={index * 100}>
-              <Card className="h-full border-border/60 bg-card shadow-none">
+              <Card className={`h-full border-border/60 ${treatments[index]} shadow-none`}>
                 <CardContent className="flex flex-col gap-4">
                   <div className="flex text-gold">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star key={i} className="size-3.5 fill-current" />
                     ))}
                   </div>
-                  <p className="text-sm leading-relaxed text-pretty text-card-foreground">
+                  <p className="text-sm leading-relaxed text-pretty text-current/75">
                     &ldquo;{review.quote}&rdquo;
                   </p>
                   <div className="mt-auto pt-2">
-                    <p className="text-sm font-medium text-card-foreground">
+                    <p className="text-sm font-medium text-current">
                       {review.name}
                     </p>
                     <p className="text-xs text-muted-foreground">{review.tag}</p>
@@ -67,7 +70,8 @@ export function TrustSection() {
                 </CardContent>
               </Card>
             </Reveal>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

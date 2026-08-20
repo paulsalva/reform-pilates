@@ -26,10 +26,10 @@ export function SiteHeader() {
   const [open, setOpen] = React.useState(false)
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-primary-foreground/15 bg-primary text-primary-foreground shadow-sm">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <a href="#top" className="flex items-center">
-          <Logo height={30} />
+          <Logo height={30} className="brightness-0 invert" />
         </a>
 
         <nav className="hidden items-center gap-7 md:flex">
@@ -37,7 +37,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm font-medium text-primary-foreground/75 transition-colors hover:text-primary-foreground"
             >
               {link.label}
             </a>
@@ -47,7 +47,7 @@ export function SiteHeader() {
         <div className="hidden md:block">
           <ComingSoonButton
             label="Book Your Intro Session"
-            className="bg-plum-gradient text-primary-foreground shadow-sm hover:opacity-90 dark:bg-none dark:bg-primary dark:text-primary-foreground"
+            className="bg-gold text-gold-foreground shadow-sm hover:bg-gold/90"
           />
         </div>
 
@@ -81,7 +81,7 @@ export function SiteHeader() {
             <div className="mt-auto p-4">
               <ComingSoonButton
                 label="Book Your Intro Session"
-                className="w-full bg-plum-gradient text-primary-foreground dark:bg-none dark:bg-primary"
+                className="w-full bg-gold text-gold-foreground hover:bg-gold/90"
                 onClick={() => setOpen(false)}
               />
             </div>
