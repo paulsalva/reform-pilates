@@ -43,6 +43,8 @@
     --color-gold-foreground: var(--gold-foreground);
     --color-mauve: var(--mauve);
     --color-mauve-foreground: var(--mauve-foreground);
+    --color-lilac: var(--lilac);
+    --color-lilac-foreground: var(--lilac-foreground);
     --radius-sm: calc(var(--radius) * 0.6);
     --radius-md: calc(var(--radius) * 0.8);
     --radius-lg: var(--radius);
@@ -89,6 +91,8 @@
     --gold-foreground: oklch(0.22 0.04 335);
     --mauve: oklch(0.68 0.075 350);
     --mauve-foreground: oklch(0.22 0.04 335);
+    --lilac: oklch(0.94 0.035 320);
+    --lilac-foreground: oklch(0.24 0.05 335);
 }
 
 .dark {
@@ -143,6 +147,8 @@
 
 @layer utilities {
   .bg-hero-gradient {
+    background-size: 180% 180%;
+    animation: gradient-drift 18s ease-in-out infinite alternate;
     background-image: radial-gradient(
         140% 120% at 15% 0%,
         oklch(0.4 0.08 345 / 0.55) 0%,
@@ -171,6 +177,8 @@
   }
 
   .bg-plum-gradient {
+    background-size: 170% 170%;
+    animation: gradient-drift 16s ease-in-out infinite alternate;
     background-image: linear-gradient(
       135deg,
       oklch(0.28 0.06 340) 0%,
@@ -184,6 +192,32 @@
       oklch(0.68 0.075 350) 0%,
       oklch(0.75 0.09 78) 100%
     );
+  }
+
+  .card-lilac {
+    background-color: var(--lilac);
+    color: var(--lilac-foreground);
+  }
+
+  .card-lines {
+    background-image: linear-gradient(90deg, color-mix(in oklch, var(--primary) 6%, transparent) 1px, transparent 1px);
+    background-size: 18px 100%;
+  }
+
+  .card-diagonal {
+    background-image: repeating-linear-gradient(135deg, color-mix(in oklch, var(--primary) 4%, transparent) 0 1px, transparent 1px 12px);
+  }
+
+  @keyframes gradient-drift {
+    0% { background-position: 0% 30%; }
+    100% { background-position: 100% 70%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bg-hero-gradient,
+    .bg-plum-gradient {
+      animation: none;
+    }
   }
 
   .text-gradient-gold {
