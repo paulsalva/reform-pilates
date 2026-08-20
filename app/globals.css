@@ -198,18 +198,13 @@
     );
   }
 
-  .card-lilac {
-    background-color: var(--lilac);
-    color: var(--lilac-foreground);
+  .section-lines {
+    background-image: linear-gradient(90deg, color-mix(in oklch, var(--primary) 7%, transparent) 1px, transparent 1px);
+    background-size: 28px 100%;
   }
 
-  .card-lines {
-    background-image: linear-gradient(90deg, color-mix(in oklch, var(--primary) 6%, transparent) 1px, transparent 1px);
-    background-size: 18px 100%;
-  }
-
-  .card-diagonal {
-    background-image: repeating-linear-gradient(135deg, color-mix(in oklch, var(--primary) 4%, transparent) 0 1px, transparent 1px 12px);
+  .section-diagonal {
+    background-image: repeating-linear-gradient(135deg, color-mix(in oklch, var(--primary) 5%, transparent) 0 1px, transparent 1px 16px);
   }
 
   @keyframes gradient-drift {

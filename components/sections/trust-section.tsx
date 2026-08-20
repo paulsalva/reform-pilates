@@ -29,7 +29,7 @@ const REVIEWS = [
 
 export function TrustSection() {
   return (
-    <section className="border-y border-border/60 bg-muted/40">
+    <section className="section-diagonal border-y border-border/60 bg-muted/40">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
         <Reveal className="mb-10 flex flex-col items-center gap-3 text-center">
           <div className="flex text-gold">
@@ -46,32 +46,28 @@ export function TrustSection() {
         </Reveal>
 
         <div className="grid gap-5 sm:grid-cols-3">
-          {REVIEWS.map((review, index) => {
-            const frames = ["card-lines", "card-lilac card-diagonal", "bg-plum-gradient"]
-
-            return (
+          {REVIEWS.map((review, index) => (
             <Reveal key={review.name} delay={index * 100}>
-              <Card className={`h-full gap-0 border-border/60 bg-card p-2 shadow-none sm:p-2.5 ${frames[index]}`}>
-                <CardContent className="flex px-1.5 pt-1 pb-3 text-gold">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="size-3.5 fill-current" />
-                  ))}
-                </CardContent>
-                <div className="flex flex-1 flex-col gap-4 rounded-2xl bg-card p-4 ring-1 ring-border/50">
+              <Card className="h-full border-border/60 bg-card shadow-none">
+                <CardContent className="flex flex-col gap-4">
+                  <div className="flex text-gold">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className="size-3.5 fill-current" />
+                    ))}
+                  </div>
                   <p className="text-sm leading-relaxed text-pretty text-card-foreground">
                     &ldquo;{review.quote}&rdquo;
                   </p>
-                  <div className="mt-auto">
+                  <div className="mt-auto pt-2">
                     <p className="text-sm font-medium text-card-foreground">
                       {review.name}
                     </p>
                     <p className="text-xs text-muted-foreground">{review.tag}</p>
                   </div>
-                </div>
+                </CardContent>
               </Card>
             </Reveal>
-            )
-          })}
+          ))}
         </div>
       </div>
     </section>
