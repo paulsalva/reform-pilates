@@ -87,6 +87,8 @@
     --sidebar-accent-foreground: oklch(0.26 0.06 335);
     --sidebar-border: oklch(0.88 0.02 60);
     --sidebar-ring: oklch(0.6 0.06 345);
+    --header: oklch(0.72 0.045 35);
+    --header-foreground: oklch(0.2 0.045 335);
     --gold: oklch(0.72 0.12 82);
     --gold-foreground: oklch(0.22 0.04 335);
     --mauve: oklch(0.68 0.075 350);
