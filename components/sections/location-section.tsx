@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { AtSign, Clock, MapPin, Phone } from "lucide-react"
 
-import { ComingSoonButton } from "@/components/coming-soon-button"
 import { Reveal } from "@/components/reveal"
 
 export function LocationSection() {
@@ -92,44 +91,36 @@ export function LocationSection() {
               A space designed for your practice.
             </h2>
           </div>
-          <div className="grid items-start gap-4 sm:grid-cols-[1.35fr_1fr]">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-muted ring-1 ring-border/60 sm:aspect-auto sm:min-h-96">
+          <div className="grid gap-4 sm:grid-cols-3">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-3xl bg-muted ring-1 ring-border/60">
               <Image
                 src="/images/standing.webp"
                 alt="Pilates equipment and movement space inside Reform Pilates"
                 fill
-                className="object-contain transition-transform duration-700 hover:scale-[1.02]"
-                sizes="(min-width: 640px) 56vw, 100vw"
+                className="object-cover transition-transform duration-700 hover:scale-[1.02]"
+                sizes="(min-width: 640px) 33vw, 100vw"
               />
             </div>
-            <div className="grid gap-4">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-muted ring-1 ring-border/60">
-                <Image
-                  src="/images/bars.webp"
-                  alt="Pilates bar equipment inside the Reform studio"
-                  fill
-                  className="object-contain transition-transform duration-700 hover:scale-[1.02]"
-                  sizes="(min-width: 640px) 44vw, 100vw"
-                />
-              </div>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-muted ring-1 ring-border/60">
-                <Image
-                  src="/images/Front-desk.webp"
-                  alt="Front desk and welcoming entry area at Reform Pilates"
-                  fill
-                  className="object-contain transition-transform duration-700 hover:scale-[1.02]"
-                  sizes="(min-width: 640px) 44vw, 100vw"
-                />
-              </div>
+            <div className="relative aspect-[3/4] overflow-hidden rounded-3xl bg-muted ring-1 ring-border/60">
+              <Image
+                src="/images/bars.webp"
+                alt="Pilates bar equipment inside the Reform studio"
+                fill
+                className="object-cover transition-transform duration-700 hover:scale-[1.02]"
+                sizes="(min-width: 640px) 33vw, 100vw"
+              />
+            </div>
+            <div className="relative aspect-[3/4] overflow-hidden rounded-3xl bg-muted ring-1 ring-border/60">
+              <Image
+                src="/images/Front-desk.webp"
+                alt="Front desk and welcoming entry area at Reform Pilates"
+                fill
+                className="object-cover transition-transform duration-700 hover:scale-[1.02]"
+                sizes="(min-width: 640px) 33vw, 100vw"
+              />
             </div>
           </div>
         </Reveal>
-
-        <ComingSoonButton
-          label="Book Your Intro Session"
-          size="lg"
-          className="mt-6 h-12 w-fit rounded-full bg-plum-gradient px-6 text-base text-primary-foreground shadow-sm hover:opacity-90 dark:bg-none dark:bg-primary lg:mt-8"
-        />
       </div>
     </section>
   )
