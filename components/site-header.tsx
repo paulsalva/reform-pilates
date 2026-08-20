@@ -26,10 +26,10 @@ export function SiteHeader() {
   const [open, setOpen] = React.useState(false)
 
   return (
-    <header className="sticky top-0 z-40 border-b border-primary-foreground/15 bg-primary text-primary-foreground shadow-sm">
+    <header className="sticky top-0 z-40 border-b border-header-foreground/10 bg-[var(--header)] text-[var(--header-foreground)] shadow-sm">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <a href="#top" className="flex items-center">
-          <Logo height={30} className="brightness-0 invert" />
+          <Logo height={30} />
         </a>
 
         <nav className="hidden items-center gap-7 md:flex">
@@ -37,7 +37,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-primary-foreground/75 transition-colors hover:text-primary-foreground"
+              className="text-sm font-medium text-[var(--header-foreground)]/70 transition-colors hover:text-[var(--header-foreground)]"
             >
               {link.label}
             </a>
@@ -55,7 +55,7 @@ export function SiteHeader() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="text-[var(--header-foreground)] hover:bg-black/5 md:hidden"
             aria-label="Open menu"
             onClick={() => setOpen(true)}
           >
