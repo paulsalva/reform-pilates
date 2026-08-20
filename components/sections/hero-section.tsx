@@ -36,6 +36,7 @@ export function HeroSection() {
               size="lg"
               className="h-12 rounded-full border-white/20 bg-transparent px-6 text-base text-white hover:bg-white/10"
               render={<a href="#classes" />}
+              nativeButton={false}
             >
               See Class Types
             </Button>

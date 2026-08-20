@@ -71,7 +71,11 @@ export function SiteHeader() {
             </SheetHeader>
             <nav className="flex flex-col gap-1 px-4">
               {NAV_LINKS.map((link) => (
-                <SheetClose key={link.href} render={<a href={link.href} />}>
+                <SheetClose
+                  key={link.href}
+                  render={<a href={link.href} />}
+                  nativeButton={false}
+                >
                   <span className="block rounded-md px-2 py-3 text-base font-medium text-foreground transition-colors hover:bg-muted">
                     {link.label}
                   </span>
