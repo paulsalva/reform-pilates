@@ -47,27 +47,27 @@ export function TrustSection() {
 
         <div className="grid gap-5 sm:grid-cols-3">
           {REVIEWS.map((review, index) => {
-            const treatments = ["bg-card card-lines", "card-lilac card-diagonal", "bg-plum-gradient text-primary-foreground"]
+            const frames = ["card-lines", "card-lilac card-diagonal", "bg-plum-gradient"]
 
             return (
             <Reveal key={review.name} delay={index * 100}>
-              <Card className={`h-full border-border/60 ${treatments[index]} shadow-none`}>
-                <CardContent className="flex flex-col gap-4">
-                  <div className="flex text-gold">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="size-3.5 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-sm leading-relaxed text-pretty text-current/75">
+              <Card className={`h-full gap-0 border-border/60 bg-card p-2 shadow-none sm:p-2.5 ${frames[index]}`}>
+                <CardContent className="flex px-1.5 pt-1 pb-3 text-gold">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="size-3.5 fill-current" />
+                  ))}
+                </CardContent>
+                <div className="flex flex-1 flex-col gap-4 rounded-2xl bg-card p-4 ring-1 ring-border/50">
+                  <p className="text-sm leading-relaxed text-pretty text-card-foreground">
                     &ldquo;{review.quote}&rdquo;
                   </p>
-                  <div className="mt-auto pt-2">
-                    <p className="text-sm font-medium text-current">
+                  <div className="mt-auto">
+                    <p className="text-sm font-medium text-card-foreground">
                       {review.name}
                     </p>
                     <p className="text-xs text-muted-foreground">{review.tag}</p>
                   </div>
-                </CardContent>
+                </div>
               </Card>
             </Reveal>
             )

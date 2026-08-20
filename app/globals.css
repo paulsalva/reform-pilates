@@ -131,8 +131,10 @@
     --sidebar-ring: oklch(0.68 0.075 350);
     --gold: oklch(0.78 0.13 85);
     --gold-foreground: oklch(0.2 0.04 335);
-    --mauve: oklch(0.68 0.075 350);
-    --mauve-foreground: oklch(0.18 0.035 336);
+  --mauve: oklch(0.68 0.075 350);
+  --mauve-foreground: oklch(0.18 0.035 336);
+  --lilac: oklch(0.3 0.055 338);
+  --lilac-foreground: oklch(0.94 0.02 320);
 }
 
 @layer base {

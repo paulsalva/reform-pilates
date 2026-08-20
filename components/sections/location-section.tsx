@@ -6,7 +6,7 @@ import { Reveal } from "@/components/reveal"
 
 export function LocationSection() {
   return (
-    <section id="visit" className="bg-background">
+    <section id="visit" className="border-t border-border/60 bg-muted/40">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
           <Reveal className="relative flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 overflow-hidden rounded-3xl bg-plum-gradient text-primary-foreground sm:aspect-[16/9] lg:aspect-auto">
