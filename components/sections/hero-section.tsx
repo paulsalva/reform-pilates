@@ -23,7 +23,7 @@ export function HeroSection() {
             yours, on day one.
           </p>
 
-          <div className="flex flex-col gap-3 sm:flex-row">
+          <div id="hero-actions" className="flex flex-col gap-3 sm:flex-row">
             <ComingSoonButton
               label="Book Your Intro Session"
               size="lg"

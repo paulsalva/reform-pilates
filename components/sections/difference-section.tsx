@@ -33,8 +33,8 @@ export function DifferenceSection() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
           <Reveal className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl ring-1 ring-border/60">
             <Image
-              src="/images/studio-interior.png"
-              alt="A row of reformer machines in a warm, sunlit boutique Pilates studio"
+              src="/images/Front-desk.webp"
+              alt="The welcoming front desk inside Reform Pilates"
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 560px, 100vw"
